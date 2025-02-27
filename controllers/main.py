@@ -8,7 +8,7 @@ class AuthSignupHomeInherit(AuthSignupHome):
         qcontext = super(AuthSignupHomeInherit, self).get_auth_signup_qcontext()
         qcontext.update({k: v for (k, v) in request.params.items() if k in ['mobile']})
         if not qcontext.get('mobile'):
-            qcontext['error'] = 'Mobile number is required.'
+            qcontext['error'] = 'Thay đổi'
         return qcontext
 
     def _prepare_signup_values(self, qcontext):
